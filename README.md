@@ -75,4 +75,22 @@ _git log --oneline_ – ïîëó÷èòü ñîêğàù¸ííûé ëîã.
 ## HEAD
 _HEAD_ – îäèí èç ñëóæåáíûõ ôàéëîâ ïàïêè __".git"__; â æóğíàëå ëîãîâ óêàçûâàåò íà êîììèò, êîòîğûé ñäåëàí ïîñëåäíèì.
 
+## Ñòàòóñû
+### Untracked / tracked
+_untracked_ – íåîòñëåæèâàåìûé;
+_tracked_ – îòñëåæèâàåìûé
+### Staged
+_staged_ – ïîäãîòîâëåííûé (tracked)
+
+### Modified
+_modified_ – èçìåí¸ííûé (tracked)
+
+```mermaid
+graph LR;
+Untracked -- "git add" --> staged;
+Staged -- "git commit -m ''" --> tracked;
+Staged --"Èçìåíåíèÿ" --> modified;
+Tracked -- "Èçìåíåíèÿ" --> modified;
+Modified -- "git add" --> staged.
+
 
